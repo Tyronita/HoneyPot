@@ -39,17 +39,17 @@ Two victim personas mapped to these scam types:
 
 ### Phase 1: Infrastructure Setup
 
-- [ ] **1.1** Acquire UK VOIP number
-- [ ] **1.2** Set up Retell AI account and configure webhook endpoints
-- [ ] **1.3** Set up cloud n8n instance
+- [x] **1.1** Acquire UK VOIP number
+- [x] **1.2** Set up Retell AI account and configure webhook endpoints
+- [x] **1.3** Set up cloud n8n instance
 
 ### Phase 2: Voice Agent Development (Retell)
 
-- [ ] **2.1** Create base agent configuration in Retell
+- [x] **2.1** Create base agent configuration in Retell
 - [x] **2.2** Write system prompt for **Elderly Persona** → `prompts/elderly-persona.md`
 - [x] **2.3** Write system prompt for **Technophobic Homeowner Persona** → `prompts/technophobic-homeowner-persona.md`
-- [ ] **2.4** Configure call recording and transcription output
-- [ ] **2.5** Test each persona with sample calls
+- [x] **2.4** Configure call recording and transcription output
+- [x] **2.5** Test each persona with sample calls
 
 ### Phase 3: Workflow Automation (n8n)
 
