@@ -28,10 +28,12 @@ UK-based scam call honeypot that wastes scammers' time with AI agents, analyses 
 
 Two victim personas mapped to these scam types:
 
-| Persona | Best Against | Time-Wasting Tactics |
-|---------|--------------|---------------------|
-| **Elderly/Grandma** | Bank, Utility, HMRC | Hard of hearing, searching for reading glasses, finding notepad, trusting |
-| **Technophobic Homeowner** | Utility/Telecom, Bank | Doesn't understand smart meters or online banking, asks scammer to explain everything, confused by "account numbers" |
+| Persona           | Age | Background & Communication Style                                                           | Research Relevance                                                  |
+| ----------------- | ------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| **Margaret Hale** | 72   | Retired librarian; moderate digital literacy; prefers clear repetition and paper records   | Age-related accessibility, cognitive load, simplified service flows |
+| **Daniel Brooks** | 45     | Electrician; practical thinker; prefers direct explanations and task-focused communication | Usability of digital service portals, efficiency studies            |
+| **Aisha Rahman**  | 32   | Project manager; high digital literacy; fast-paced and concise in communication            | Digital-first UX design, automated assistance clarity               |
+
 
 ---
 
