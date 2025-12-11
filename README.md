@@ -7,7 +7,7 @@ UK-based scam call honeypot that wastes scammers' time with AI agents, analyses 
 1. **Bait** — Seed phone numbers across UK platforms (Gumtree, Craigslist, Facebook Marketplace)
 2. **Trap** — AI voice agents answer scammer calls, keeping them engaged as long as possible
 3. **Analyse** — Transcripts are categorised by scam type and techniques used
-4. **Publish** — Dashboard displays trends filtered by vulnerability type (elderly, ESL, etc.)
+4. **Publish** — Dashboard displays trends filtered by vulnerability type
 
 ## Tech Stack
 
@@ -26,12 +26,11 @@ UK-based scam call honeypot that wastes scammers' time with AI agents, analyses 
 
 ## AI Personas
 
-Three victim personas mapped to these scam types:
+Two victim personas mapped to these scam types:
 
 | Persona | Best Against | Time-Wasting Tactics |
 |---------|--------------|---------------------|
-| **Elderly/Grandma** | Bank, Utility | Hard of hearing, searching for reading glasses, finding notepad, trusting |
-| **ESL Immigrant** | HMRC/Gov | Asks for repetition, fears authority, compliant, misunderstands idioms |
+| **Elderly/Grandma** | Bank, Utility, HMRC | Hard of hearing, searching for reading glasses, finding notepad, trusting |
 | **Technophobic Homeowner** | Utility/Telecom, Bank | Doesn't understand smart meters or online banking, asks scammer to explain everything, confused by "account numbers" |
 
 ---
@@ -47,15 +46,10 @@ Three victim personas mapped to these scam types:
 ### Phase 2: Voice Agent Development (Retell)
 
 - [ ] **2.1** Create base agent configuration in Retell
-- [ ] **2.2** Write system prompt for **Elderly Persona**
-  - Include: hearing issues, tech confusion, trust signals
-  - Add time-wasting behaviours (searching for reading glasses, finding notepad)
-- [ ] **2.3** Write system prompt for **ESL Persona**
-  - Include: asking for repetition, misunderstanding idioms, compliance patterns
-- [ ] **2.4** Write system prompt for **Technophobic Homeowner Persona**
-  - Include: confusion over smart meters, online banking fear, asks for repeated explanations
-- [ ] **2.5** Configure call recording and transcription output
-- [ ] **2.6** Test each persona with sample calls
+- [x] **2.2** Write system prompt for **Elderly Persona** → `prompts/elderly-persona.md`
+- [x] **2.3** Write system prompt for **Technophobic Homeowner Persona** → `prompts/technophobic-homeowner-persona.md`
+- [ ] **2.4** Configure call recording and transcription output
+- [ ] **2.5** Test each persona with sample calls
 
 ### Phase 3: Workflow Automation (n8n)
 
