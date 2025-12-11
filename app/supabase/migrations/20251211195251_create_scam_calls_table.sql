@@ -22,17 +22,10 @@
   - `created_at` (timestamptz) - When the record was created
 
   ## Security
-  
-  ### Row Level Security (RLS)
-  - Enabled on `scam_calls` table
-  - Public read access: Anyone can view scam data (anonymized, educational purpose)
-  - Restricted write access: Only authenticated service accounts can insert/update data
-  
-  ### Policies
-  1. **Public Read Access** - Allows anyone to view scam call data for educational purposes
-  2. **Authenticated Insert** - Only authenticated users can add new scam records
-  3. **Authenticated Update** - Only authenticated users can update existing records
-  4. **Authenticated Delete** - Only authenticated users can delete records
+
+  - Table is public (no RLS policies)
+  - Anyone can read, insert, update, or delete data
+  - Intended for public-facing educational database
 
   ## Notes
   - All data is anonymized to protect privacy
@@ -54,37 +47,6 @@ CREATE TABLE IF NOT EXISTS scam_calls (
   transcript text NOT NULL,
   created_at timestamptz DEFAULT now()
 );
-
--- Enable RLS
-ALTER TABLE scam_calls ENABLE ROW LEVEL SECURITY;
-
--- Policy: Anyone can read scam data (public educational purpose)
-CREATE POLICY "Public can view scam data"
-  ON scam_calls
-  FOR SELECT
-  USING (true);
-
--- Policy: Only authenticated users can insert
-CREATE POLICY "Authenticated users can insert scam data"
-  ON scam_calls
-  FOR INSERT
-  TO authenticated
-  WITH CHECK (true);
-
--- Policy: Only authenticated users can update
-CREATE POLICY "Authenticated users can update scam data"
-  ON scam_calls
-  FOR UPDATE
-  TO authenticated
-  USING (true)
-  WITH CHECK (true);
-
--- Policy: Only authenticated users can delete
-CREATE POLICY "Authenticated users can delete scam data"
-  ON scam_calls
-  FOR DELETE
-  TO authenticated
-  USING (true);
 
 -- Create indexes for better query performance
 CREATE INDEX IF NOT EXISTS idx_scam_calls_call_date ON scam_calls(call_date DESC);
