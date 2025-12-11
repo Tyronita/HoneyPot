@@ -67,15 +67,15 @@ Two victim personas mapped to these scam types:
 
 ### Phase 4: Frontend + Database (Bolt.new)
 
-- [ ] **4.1** Prompt Bolt.new to generate full-stack dashboard:
-- [ ] **4.3** Add filter controls (vulnerability type, scam category, date range)
-- [ ] **4.4** Create scam card component with:
-  - Category badge
-  - Summary + techniques tags
-  - Call duration
-  - "Why this was unique" section
-- [ ] **4.5** Add transcript expand/collapse
-- [ ] **4.6** Build statistics overview
+- [x] **4.1** Prompt Bolt.new to generate full-stack dashboard:
+- [x] **4.3** Add filter controls (vulnerability type, scam category, date range)
+- [x] **4.4** Create scam card component with:
+        - Category badge
+        - Summary + techniques tags
+        - Call duration
+        - "Why this was unique" section
+- [x] **4.5** Add transcript expand/collapse
+- [x] **4.6** Build statistics overview
 - [ ] **4.7** Test database connection and queries
 
 ### Phase 5: Seeding Operations
